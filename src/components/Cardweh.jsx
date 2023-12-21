@@ -69,7 +69,7 @@ class Cardweh extends React.Component {
         commentArr.findIndex((c) => c._id === sid),
         1
       );
-      this.state = { ...this.state, comments: this.state.comments };
+      this.setState({ ...this.state, comments: this.state.comments });
     });
   }
 
@@ -108,7 +108,7 @@ class Cardweh extends React.Component {
                     <p className="display-6">{comment.rate}</p>
                     <Button
                       className="btn btn-danger"
-                      onClick={this.deleteComment(comment._id)}
+                      onClick={() => this.deleteComment(comment._id)}
                     >
                       X
                     </Button>
